@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "s3:PutObject",
+      "Resource": "*",
+      "Condition": {
+        "IpAddress" : {
+          "aws:SourceIp" : "17.5.6.7"
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": "s3:PutObject",
+      "Resource": "*",
+      "Condition": {
+        "DateGreaterThan" : {
+          "aws:CurrentTime" : "2020-01-01T12:00:00Z"
+        }
+      }
+    }
+  ]
+}
