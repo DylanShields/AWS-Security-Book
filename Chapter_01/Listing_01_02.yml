@@ -1,0 +1,28 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 172.16.0.0/12
+
+  PrivateSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: 172.16.0.0/24
+      AvailabilityZone: us-east-1a
+
+  ApplicationSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: For Sample Internal Application
+      VpcId: !Ref VPC
+
+  ApplicationInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-79fd7eee
+      KeyName: mykeypair
+      SubnetId: !Ref PrivateSubnet
+      SecurityGroupIds: !Ref ApplicationSecurityGroup
