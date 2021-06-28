@@ -1,0 +1,6 @@
+{
+  "LoggingEnabled": {
+    "TargetBucket": "MyAccessLogsBucket",
+    "TargetPrefix": "MyExistingBucketLogs/"
+  }
+}
