@@ -1,0 +1,21 @@
+[{
+  "Name": "PayloadSizeConstraintRule",
+  "Priority": 1,
+  "Statement": {
+    "SizeConstraintStatement": {
+        "FieldToMatch": {
+            "Body": {}
+        },
+        "ComparisonOperator": "GT",
+        "Size": 1000
+    }
+  },
+  "Action": {
+    "Block": {}
+  },
+  "VisibilityConfig": {
+    "SampledRequestsEnabled": true,
+    "CloudWatchMetricsEnabled": true,
+    "MetricName": "PayloadSizeConstraintRule"
+  }
+}]
