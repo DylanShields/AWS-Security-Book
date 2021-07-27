@@ -4,7 +4,8 @@ Resources:
   VPC:
     Type: AWS::EC2::VPC
     Properties:
-      CidrBlock: 172.16.0.0/12
+      CidrBlock: 172.16.0.0/16
+      EnableDnsHostnames: true
 
   PrivateSubnet:
     Type: AWS::EC2::Subnet
@@ -22,7 +23,8 @@ Resources:
   ApplicationInstance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-79fd7eee
+      ImageId: ami-0dc2d3e4c0f9ebd18
       KeyName: mykeypair
       SubnetId: !Ref PrivateSubnet
-      SecurityGroupIds: !Ref ApplicationSecurityGroup
+      SecurityGroupIds:
+        - !Ref ApplicationSecurityGroup
