@@ -2,7 +2,8 @@
 
 aws ec2 create-security-group \
     --vpc-id vpc-1234 \
-    --group-name "PublicAccessSecurityGroup"
+    --group-name "PublicAccessSecurityGroup" \
+    --description "AllowsPublicAccess"
 
 aws ec2 modify-instance-attribute \
     --instance-id i-1234 \
