@@ -21,5 +21,5 @@ aws iam create-user --user-name Bob
 
 # This command creates a password that can be used to login as Bob in the AWS
 # Console. The password is set to require a reset on first login.
-aws iam create-login-profile --user-name Bob --password hunter2 \
+aws iam create-login-profile --user-name Bob --password B0bsPassword \
     --password-reset-required
