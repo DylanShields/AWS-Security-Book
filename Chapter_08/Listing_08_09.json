@@ -1,0 +1,26 @@
+{
+    "findings": [{
+        "arn": "arn:aws:inspector:us-west-2:123456789012:target/A/template/B/run/C/finding/D",
+        "schemaVersion": 1,
+        "service": "Inspector",
+        "serviceAttributes": {
+            "schemaVersion": 1,
+            "assessmentRunArn": "arn:aws:inspector:us-west-2:123456789012:target/A/template/B/run/C",
+            "rulesPackageArn": "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-H5hpSawc"
+        },
+        "assetType": "ec2-instance",
+        "assetAttributes": "...",
+        "id": "5.2.4 Ensure SSH Protocol is set to 2",
+        "title": "Instance i-12345 is not compliant with rule 5.2.4 Ensure SSH Protocol is set to 2, 1.0.0 CIS Amazon Linux 2 Benchmark.",
+        "description": "SSH supports two different and incompatible protocols: SSH1 and SSH2. SSH1 was the original protocol and was subject to security issues. SSH2 is more advanced and secure. SSH v1 suffers from insecurities that do not affect SSH v2",
+        "recommendation": "Edit the /etc/ssh/sshd_config file to set the parameter as follows: Protocol 2",
+        "severity": "High",
+        "numericSeverity": 9.0,
+        "confidence": 10,
+        "indicatorOfCompromise": false,
+        "attributes": "...",
+        "createdAt": 1607956855.625,
+        "updatedAt": 1607956855.625
+    }],
+    "failedItems": {}
+}
