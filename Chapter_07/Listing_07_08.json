@@ -1,0 +1,38 @@
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAEXAMPLE:Dylan",
+        "arn": "arn:aws:sts::123456789012:assumed-role/Admin/Dylan",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIAEXAMPLE"
+    },
+    "eventTime": "2020-11-16T10:33:45Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "RunInstances",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "192.168.0.1",
+    "userAgent": "console.ec2.amazonaws.com",
+    "eventID": "8e688a17-3c5e-4292-a762-3134bebaf9a8",
+    "eventType": "AwsApiCall",
+    "requestParameters": {
+        "instancesSet": {
+            "items": [{
+                "imageId": "ami-0947d2ba12ee1ff75",
+                "minCount": 1,
+                "maxCount": 1,
+                "keyName": "Test"
+            }]
+        },
+        "instanceType": "p3.16xl"
+    },
+    "responseElements": {
+        "instancesSet": {
+            "items": [{
+                "instanceId": "i-a1b2c3",
+                "imageId": "ami-0947d2ba12ee1ff75",
+                "instanceType": "p3.16xl"
+            }, "..."]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "Events": [{
+        "EventId": "298fc38a-456d-4645-a550-427a535ce346",
+        "EventName": "TerminateInstances",
+        "ReadOnly": "false",
+        "AccessKeyId": "AKIAEXAMPLE",
+        "EventTime": 1604090694.0,
+        "EventSource": "ec2.amazonaws.com",
+        "Username": "Dylan",
+        "Resources": ["..."],
+        "CloudTrailEvent": "{ ... }"
+    }]
+}

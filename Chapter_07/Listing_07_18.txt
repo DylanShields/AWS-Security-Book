@@ -1,0 +1,3 @@
+stats sum(bytes) as bytesTransferred by srcAddr, dstAddr
+| sort bytesTransferred desc
+| limit 5
