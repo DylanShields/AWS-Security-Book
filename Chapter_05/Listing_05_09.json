@@ -1,15 +1,20 @@
-[{
-  "Name": "EnableAWSManagedRuleGroup",
-  "Priority": 1,
-  "Statement": {
-    "ManagedRuleGroupStatement": {
-        "VendorName": "AWS",
-        "Name": "AWSManagedRulesKnownBadInputsRuleSet"
+[
+    {
+        "Name": "EnableAWSManagedRuleGroup",
+        "Priority": 1,
+        "OverrideAction": {
+            "None": {}
+        },
+        "Statement": {
+            "ManagedRuleGroupStatement": {
+                "VendorName": "AWS",
+                "Name": "AWSManagedRulesKnownBadInputsRuleSet"
+            }
+        },
+        "VisibilityConfig": {
+            "SampledRequestsEnabled": true,
+            "CloudWatchMetricsEnabled": true,
+            "MetricName": "AWSManagedWafRule1"
+        }
     }
-  },
-  "VisibilityConfig": {
-    "SampledRequestsEnabled": true,
-    "CloudWatchMetricsEnabled": true,
-    "MetricName": "ManagedRuleGroupStatement"
-  }
-}]
+]

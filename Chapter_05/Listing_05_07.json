@@ -17,5 +17,9 @@
     "SampledRequestsEnabled": true,
     "CloudWatchMetricsEnabled": true,
     "MetricName": "PayloadSizeConstraintRule"
-  }
+  },
+  "TextTransformations": [{
+    "Type": "NONE",
+    "Priority": 0
+  }]
 }]

@@ -5,4 +5,6 @@ aws wafv2 create-web-acl \
     --scope REGIONAL \
     --default-action "Allow={}" \
     --description "Rate limit for social media site" \
-    --rules file://Listing_05_11.json
+    --rules file://Listing_05_11.json \
+    --visibility-config SampledRequestsEnabled=true,CloudWatchMetricsEnabled=true,MetricName=RateLimitWebAclMetrics
+

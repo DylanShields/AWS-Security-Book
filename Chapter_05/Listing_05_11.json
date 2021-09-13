@@ -1,5 +1,5 @@
 [{
-  "Name": "Rate Limit Rule",
+  "Name": "rate-limit-rule",
   "Priority": 1,
   "Statement": {
     "RateBasedStatement": {

@@ -1,10 +1,12 @@
 #!/bin/bash
 
+
 aws lambda create-function \
     --function-name honeypot-lambda \
     --runtime python3.7 \
     --role arn:aws:...:HoneypotLambdaRole \
     --handler honeypot.register_ip_address
+    --zip-file fileb://Listing_05_17_emptyzip.zip
 
 
 aws apigateway create-resource \
