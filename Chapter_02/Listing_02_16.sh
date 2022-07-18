@@ -1,20 +1,9 @@
 #!/bin/bash
 
-aws sts assume-role \
-    --role-arn arn:aws:iam::123456789012:role/SampleRole \
-    --role-session-name my-sample-role-session \
-    --duration-seconds 900
+aws iam create-policy \
+    --policy-name AssumeSampleRolePolicy \
+    --policy-document file://Listing_02_14.json
 
-# Expected Response Structure
-# {
-#    "AssumedRoleUser": {
-#        "AssumedRoleId": "...",
-#        "Arn": "..."
-#    },
-#    "Credentials": {
-#        "SecretAccessKey": "...",
-#        "SessionToken": "...",
-#        "Expiration": "2020-01-01T12:00:00Z",
-#        "AccessKeyId": ".."
-#    }
-# }
+aws iam attach-user-policy \
+    --user-name Alice \
+    --policy-arn arn:aws:iam::123456789012:policy/AssumeSampleRolePolicy

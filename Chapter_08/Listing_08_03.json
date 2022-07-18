@@ -1,0 +1,13 @@
+{
+    "trailList": [{
+        "Name": "MyTrail",
+        "S3BucketName": "my-cloudtrail-bucket",
+        "IncludeGlobalServiceEvents": true,
+        "IsMultiRegionTrail": true,
+        "HomeRegion": "us-east-1",
+        "TrailARN": "arn:aws:cloudtrail:us-east-1:123456789012:trail/MyTrail",
+        "LogFileValidationEnabled": true,
+        "HasCustomEventSelectors": false,
+        "IsOrganizationTrail": false
+    }]
+}

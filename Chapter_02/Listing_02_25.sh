@@ -1,5 +1,9 @@
 #!/bin/bash
 
-aws organizations attach-policy \
-    --policy-id p-DenyCreatingInstancesPolicy \
-    --target-id r-centralaccountid123
+aws iam tag-user \
+    --user-name Alice \
+    --tags Key=Project,Value=ABC
+
+aws ec2 create-tags \
+    --resources i-123abc \
+    --tags Key=Project,Value=ABC

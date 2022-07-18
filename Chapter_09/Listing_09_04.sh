@@ -1,6 +1,3 @@
 #!/bin/bash
 
-aws securityhub create-insight \
-    --filters '{"ResourceType": [{"Comparison": "EQUALS","Value": "AwsIamRole"}],"SeverityLabel": [{"Comparison": "EQUALS","Value": "CRITICAL"}]}' \
-    --group-by-attribute "ResourceId" \
-    --name "Roles with Critical Findings"
+aws configservice put-config-rule --config-rule '{"ConfigRuleName": "MyRule", "Source": {"Owner": "AWS", "SourceIdentifier": "S3_DEFAULT_ENCRYPTION_KMS"}}'

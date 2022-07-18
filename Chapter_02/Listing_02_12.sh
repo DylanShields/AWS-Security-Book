@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# The following command creates a new IAM Role with an assume role policy
-# document that matches the one in the Listing_02_12_resourcepolicy.json
-# file.
-aws iam create-role \
-    --role-name SampleRole \
-    --assume-role-policy-document file://Listing_02_12_resourcepolicy.json
+# This command creates a new managed policy that allows Querying a DDB table
+aws iam create-policy \
+    --policy-name SampleGroupPolicy \
+    --policy-document file://Listing_02_11_policy.json
+
+# This command attaches the newly created policy to the Developers IAM Group
+$ aws iam attach-group-policy \
+    --group-name Developers \
+    --policy-arn arn:aws:iam::123456789012:policy/SampleGroupPolicy

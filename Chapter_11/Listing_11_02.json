@@ -1,0 +1,23 @@
+{
+  "Name": "Block_Cross_Site_Scripting",
+  "Priority": 0,
+  "Action": {
+    "Block": {}
+  },
+  "VisibilityConfig": {
+    "SampledRequestsEnabled": true,
+    "CloudWatchMetricsEnabled": true,
+    "MetricName": "Block_Cross_Site_Scripting"
+  },
+  "Statement": {
+    "XssMatchStatement": {
+      "FieldToMatch": {
+        "Body": {}
+      },
+      "TextTransformations": [{
+        "Type": "JS_DECODE",
+        "Priority": 0
+      }]
+    }
+  }
+}

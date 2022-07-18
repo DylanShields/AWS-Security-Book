@@ -1,7 +1,5 @@
 #!/bin/bash
 
-aws ec2 authorize-security-group-ingress \
-    --group-id sg-1234 \
-    --cidr "0.0.0.0/0" \
-    --port 22 \
-    --protocol 6
+# This command will search for ListBuckets events in your CT event history.
+# This file can be downloaded from the AWS Console for CloudTrail.
+grep "ListBuckets" event_history.csv

@@ -1,0 +1,23 @@
+{
+  "Name": "Block_SQL_Injection",
+  "Priority": 0,
+  "Action": {
+    "Block": {}
+  },
+  "VisibilityConfig": {
+    "SampledRequestsEnabled": true,
+    "CloudWatchMetricsEnabled": true,
+    "MetricName": "Block_SQL_Injection"
+  },
+  "Statement": {
+    "SqliMatchStatement": {
+      "FieldToMatch": {
+        "Body": {}
+      },
+      "TextTransformations": [{
+        "Type": "NONE",
+        "Priority": 0
+      }]
+    }
+  }
+}

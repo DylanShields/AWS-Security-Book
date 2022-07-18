@@ -1,5 +1,3 @@
 #!/bin/bash
 
-nmap -sT \
-    -Pn \
-    10.0.0.1
+aws iam create-service-linked-role --aws-service-name config.amazonaws.com

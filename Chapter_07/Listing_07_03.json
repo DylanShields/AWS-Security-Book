@@ -1,13 +1,19 @@
 {
-    "trailList": [{
-        "Name": "MyTrail",
-        "S3BucketName": "my-cloudtrail-bucket",
-        "IncludeGlobalServiceEvents": true,
-        "IsMultiRegionTrail": true,
-        "HomeRegion": "us-east-1",
-        "TrailARN": "arn:aws:cloudtrail:us-east-1:123456789012:trail/MyTrail",
-        "LogFileValidationEnabled": true,
-        "HasCustomEventSelectors": false,
-        "IsOrganizationTrail": false
-    }]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::MyBucket/*",
+      "Condition": {
+        "StringNotLike": {
+          "aws:userId": [
+            "AROAEXAMPLEID:*",
+            "111111111111"
+          ]
+        }
+      }
+    }
+  ]
 }

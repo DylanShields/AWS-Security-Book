@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
+aws dynamodb restore-table-from-backup \
+    --target-table-name Music \
+    --backup-arn MusicBackup

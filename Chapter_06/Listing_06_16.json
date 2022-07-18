@@ -1,19 +1,17 @@
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "s3:*",
-      "Effect": "Deny",
-      "Principal": "*",
-      "Resource": [
-        "arn:aws:s3:::MyBucket",
-        "arn:aws:s3:::MyBucket/*"
-      ],
-      "Condition": {
-        "Bool": {
-          "aws:SecureTransport": "false"
-        }
-      }
+[{
+  "Name": "Honeypot Rule",
+  "Priority": 1,
+  "Statement": {
+    "IPSetReferenceStatement": {
+        "ARN": "arn:aws:...",
     }
-  ]
-}
+  },
+  "Action": {
+    "Block": {}
+  },
+  "VisibilityConfig": {
+    "SampledRequestsEnabled": true,
+    "CloudWatchMetricsEnabled": true,
+    "MetricName": "rate-limit-rule"
+  }
+}]

@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# In order to create the master policy document, refer to tables 2.2, 2.3, and 2.4.
-aws iam create-policy \
-    --policy-name IAMMasterPolicy \
-    --policy-document file://Listing_02_19_master_policy_document.json
-aws iam attach-role-policy \
+aws iam create-role \
     --role-name IAMMaster \
-    --policy-arn arn:aws:iam::123456789012:policy/IAMMasterPolicy
+    --assume-role-policy-document file://Listing_02_18_master_policy.json
+aws iam create-role \
+    --role-name IAMManager \
+    --assume-role-policy-document file://Listing_02_18_manager_policy.json

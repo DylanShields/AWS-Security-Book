@@ -1,0 +1,31 @@
+{
+    "Name": "BotControl-WebACL",
+    "Id": "...",
+    "ARN": "...",
+    "DefaultAction": {
+        "Allow": {}
+    },
+    "Description": "BotControl-WebACL",
+    "Rules": [{
+            ...
+        }, {
+            "Name": "BotControl-Example",
+            "Priority": 5,
+            "Statement": {
+                "ManagedRuleGroupStatement": {
+                    "Name": "AWSManagedRulesBotControlRuleSet"
+                },
+                "VisibilityConfig": {
+                    "SampledRequestsEnabled": true,
+                    "CloudWatchMetricsEnabled": true,
+                    "MetricName": "AWS-AWSBotControl-Example"
+                }
+            }
+        }
+    ],
+    "VisibilityConfig": {
+        ...
+    },
+    "Capacity": 1496,
+    "ManagedByFirewallManager": false
+}

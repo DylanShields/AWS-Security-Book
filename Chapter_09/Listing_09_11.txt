@@ -1,0 +1,12 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-02 00:00 PST
+Nmap scan report for ec2-10-0-0-1.us-west-2.compute.amazonaws.com (10.0.0.1)
+Host is up (0.063s latency).
+Not shown: 993 closed ports
+PORT     STATE    SERVICE
+22/tcp   open     ssh
+25/tcp   filtered smtp
+111/tcp  open     rpcbind
+135/tcp  filtered msrpc
+139/tcp  filtered netbios-ssn
+445/tcp  filtered microsoft-ds
+8000/tcp open     http-alt

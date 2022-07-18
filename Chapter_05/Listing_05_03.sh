@@ -1,6 +1,11 @@
 #!/bin/bash
 
-aws ec2 create-vpc-endpoint-service-configuration \
-    --network-load-balancer-arns arn:aws:elasticloadbalancing:us-east-1:123456789012:loadbalancer/net/nlb-vpce/e94221227f1ba532 \
-    --acceptance-required \
-    --privateDnsName example.com
+aws ec2 run-instances \
+    --instance-type t2.micro \
+    --subnet-id subnet-1234 \
+    --image-id ami-1234
+
+aws ec2 run-instances \
+    --instance-type t2.micro \
+    --subnet-id subnet-5678 \
+    --image-id ami-1234

@@ -1,5 +1,7 @@
 #!/bin/bash
 
-aws s3api put-bucket-versioning \
-    --bucket my-bucket \
-    --versioning-configuration Status=Enabled
+aws wafv2 create-ip-set \
+    --name "MyIpSet" \
+    --scope REGIONAL \
+    --ip-address-version IPV4 \
+    --addresses 192.0.2.0/32

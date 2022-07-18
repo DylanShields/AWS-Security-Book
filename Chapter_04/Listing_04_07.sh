@@ -1,10 +1,6 @@
 #!/bin/bash
 
-aws ec2 create-security-group \
-    --vpc-id vpc-1234 \
-    --group-name "PublicAccessSecurityGroup" \
-    --description "AllowsPublicAccess"
-
-aws ec2 modify-instance-attribute \
-    --instance-id i-1234 \
-    --groups sg-1234 sg-5678
+# This command will add a ReviewedOn=2020-01-01 tag to the Alice user
+aws iam tag-user \
+    --user-name Alice \
+    --tags Key=ReviewedOn,Value=2020-01-01

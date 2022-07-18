@@ -1,5 +1,10 @@
 #!/bin/bash
 
-# This command will search for ListBuckets events in your CT event history.
-# This file can be downloaded from the AWS Console for CloudTrail.
-grep "ListBuckets" event_history.csv
+aws organizations create-organization \
+    --feature-set ALL
+
+aws organizations invite-account-to-organization \
+    --target Id=account_a_email@example.com,Type=EMAIL
+
+aws organizations invite-account-to-organization \
+    --target Id=123456789012,Type=ACCOUNT

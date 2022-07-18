@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sudo yum install amazon-cloudwatch-agent
+aws dynamodb create-backup \
+    --table-name Music \
+    --backup-name MusicBackup

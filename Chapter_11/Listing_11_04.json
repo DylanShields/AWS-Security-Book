@@ -1,0 +1,27 @@
+{
+  "Name": "Block_DynamoDB_Injection",
+  "Priority": 0,
+  "Action": {
+    "Block": {}
+  },
+  "VisibilityConfig": {
+    "SampledRequestsEnabled": true,
+    "CloudWatchMetricsEnabled": true,
+    "MetricName": "Block_DynamoDB_Injection"
+  },
+  "Statement": {
+    "ByteMatchStatement": {
+      "FieldToMatch": {
+        "SingleQueryArgument": {
+          "Name": "search_type"
+        }
+      },
+      "PositionalConstraint": "CONTAINS",
+      "SearchString": ":",
+      "TextTransformations": [{
+        "Type": "URL_DECODE",
+        "Priority": 0
+      }]
+    }
+  }
+}

@@ -1,5 +1,9 @@
 #!/bin/bash
 
-sudo systemctl start amazon-cloudwatch-agent.service
+aws dynamodb describe-continuous-backups \
+    --table-name Music
 
-sudo systemctl enable amazon-cloudwatch-agent.service
+aws dynamodb restore-table-to-point-in-time \
+    --source-table-name Music \
+    --target-table-name MusicEarliestRestorableDateTime \
+    --restore-date-time 1519257118.0

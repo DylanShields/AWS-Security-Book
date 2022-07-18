@@ -1,8 +1,8 @@
 #!/bin/bash
 
-aws iam create-role \
-    --role-name IAMMaster \
-    --assume-role-policy-document file://Listing_02_18_master_policy.json
-aws iam create-role \
-    --role-name IAMManager \
-    --assume-role-policy-document file://Listing_02_18_manager_policy.json
+export AWS_ACCESS_KEY_ID={INSERT_ACCESS_KEY_ID}
+export AWS_SECRET_ACCESS_KEY={INSERT_SECRET_ACCESS_KEY}
+export AWS_SESSION_TOKEN={INSERT_SESSION_TOKEN}
+
+aws ec2 terminate-instances \
+    --instance-ids {INSERT_INSTANCE_ID}

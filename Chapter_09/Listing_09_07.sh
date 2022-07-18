@@ -1,4 +1,5 @@
 #!/bin/bash
 
-aws events put-rule \
-    --event-pattern '{"source": ["aws.securityhub"],"detail-type": ["Security Hub Findings - Custom Action"],"resources": ["arn:aws:securityhub:us-west-2:123456789012:action/custom/test-action1"]}'
+aws inspector list-findings \
+    --assessment-run-arns arn:aws:inspector:us-west-2:123456789012:target/A/template/B/run/C \
+    --filter severities=High

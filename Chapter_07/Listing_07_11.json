@@ -1,0 +1,14 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Deny",
+        "NotPrincipal": {"AWS": [
+            "arn:aws:iam::123456789012:user/Alice",
+        ]},
+        "Action": "s3:*",
+        "Resource": [
+            "arn:aws:s3:::mybucket",
+            "arn:aws:s3:::mybucket/*"
+        ]
+    }]
+}

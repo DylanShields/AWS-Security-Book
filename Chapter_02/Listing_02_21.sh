@@ -1,13 +1,9 @@
 #!/bin/bash
 
-aws iam create-role \
-    --role-name CrossAccountRoleForAlice \
-    --assume-role-policy-document file://Listing_02_21_cross_account_policy.json
-
+# In order to create the master policy document, refer to tables 2.2, 2.3, and 2.4.
 aws iam create-policy \
-    --policy-name DynamoDBQueryAccess \
-    --policy-document file://Listing_02_21_query_policy.json
-
+    --policy-name IAMMasterPolicy \
+    --policy-document file://Listing_02_19_master_policy_document.json
 aws iam attach-role-policy \
-    --role-name CrossAccountRoleForAlice \
-    --policy-arn arn:aws:iam::111111111111:policy/DynamoDBQueryAccess
+    --role-name IAMMaster \
+    --policy-arn arn:aws:iam::123456789012:policy/IAMMasterPolicy

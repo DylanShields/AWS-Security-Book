@@ -1,8 +1,20 @@
 #!/bin/bash
 
-export AWS_ACCESS_KEY_ID={INSERT_ACCESS_KEY_ID}
-export AWS_SECRET_ACCESS_KEY={INSERT_SECRET_ACCESS_KEY}
-export AWS_SESSION_TOKEN={INSERT_SESSION_TOKEN}
+aws sts assume-role \
+    --role-arn arn:aws:iam::123456789012:role/SampleRole \
+    --role-session-name my-sample-role-session \
+    --duration-seconds 900
 
-aws ec2 terminate-instances \
-    --instance-ids {INSERT_INSTANCE_ID}
+# Expected Response Structure
+# {
+#    "AssumedRoleUser": {
+#        "AssumedRoleId": "...",
+#        "Arn": "..."
+#    },
+#    "Credentials": {
+#        "SecretAccessKey": "...",
+#        "SessionToken": "...",
+#        "Expiration": "2020-01-01T12:00:00Z",
+#        "AccessKeyId": ".."
+#    }
+# }

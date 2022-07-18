@@ -1,9 +1,7 @@
 #!/bin/bash
 
-aws wafv2 create-web-acl \
-    --name SizeConstraintWebAcl \
-    --scope REGIONAL \
-    --default-action "Allow={}" \
-    --description "Blocks requests with BODY > 1KB" \
-    --rules file://Listing_05_07.json \
-    --visibility-config SampledRequestsEnabled=true,CloudWatchMetricsEnabled=true,MetricName=SizeConstraintWebAclMetrics
+aws ec2 authorize-security-group-ingress \
+    --group-id sg-1234 \
+    --cidr "0.0.0.0/0" \
+    --port 22 \
+    --protocol 6

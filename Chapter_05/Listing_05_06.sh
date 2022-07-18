@@ -1,5 +1,7 @@
 #!/bin/bash
 
-aws ec2 accept-vpc-endpoint-connections \
-    --service-id vpce-svc-0123abc \
-    --vpc-endpoint-ids vpce-0123abc
+aws ec2 authorize-security-group-ingress \
+    --group-id sg-1234 \
+    --cidr "0.0.0.0/0" \
+    --port 22 \
+    --protocol 6

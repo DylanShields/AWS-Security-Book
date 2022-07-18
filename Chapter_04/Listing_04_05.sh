@@ -1,5 +1,5 @@
 #!/bin/bash
 
-aws ec2 create-nat-gateway \
-    --subnet-id subnet-1234 \
-    --allocation-id {Replace with Allocation ID from running Listing_04_05_allocate_address.sh}
+# This command updates the IAM password policy for your AWS account
+aws cloudtrail lookup-events \
+    --lookup-attributes AttributeKey=EventName,AttributeValue=ListBuckets

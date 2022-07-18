@@ -1,9 +1,9 @@
 #!/bin/bash
 
-aws wafv2 create-web-acl \
-    --name ManagedRuleGroupWebAcl \
-    --scope REGIONAL \
-    --default-action "Allow={}" \
-    --description "Enables one of the AWS Managed Rule Groups" \
-    --rules file://Listing_05_09.json \
-    --visibility-config SampledRequestsEnabled=true,CloudWatchMetricsEnabled=true,MetricName=ManagedRuleGroupWebAclMetrics
+aws ec2 create-subnet \
+    --vpc-id vpc-1234 \
+    --cidr-block 10.0.0.0/24
+
+aws ec2 create-subnet \
+    --vpc-id vpc-5678 \
+    --cidr-block 10.0.1.0/24
