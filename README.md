@@ -98,6 +98,10 @@ The complete code for the examples in the book [AWS Security - Manning Publicati
    - [Listing_06_15.sh](./Chapter_06/Listing_06_15.sh)
    - [Listing_06_16.json](./Chapter_06/Listing_06_16.json)
    - [Listing_06_17.sh](./Chapter_06/Listing_06_17.sh)
+   - [Listing_06_17_emptyzip.zip](./Chapter_06/Listing_06_17_emptyzip.zip)
+   - [Listing_06_18.py](./Chapter_06/Listing_06_18.py)
+   - [Listing_06_19.txt](./Chapter_06/Listing_06_19.txt)
+   - [Listing_06_20.html](./Chapter_06/Listing_06_20.html)
  - **Chapter_07/**
    - [Listing_07_01.json](./Chapter_07/Listing_07_01.json)
    - [Listing_07_02.json](./Chapter_07/Listing_07_02.json)
@@ -119,7 +123,10 @@ The complete code for the examples in the book [AWS Security - Manning Publicati
    - [Listing_07_18.json](./Chapter_07/Listing_07_18.json)
    - [Listing_07_19.sh](./Chapter_07/Listing_07_19.sh)
    - [Listing_07_19_logging.json](./Chapter_07/Listing_07_19_logging.json)
+   - [Listing_07_20.txt](./Chapter_07/Listing_07_20.txt)
    - [Listing_07_21.sh](./Chapter_07/Listing_07_21.sh)
+   - [Listing_07_22.sql](./Chapter_07/Listing_07_22.sql)
+   - [Listing_07_23.sql](./Chapter_07/Listing_07_23.sql)
    - [Listing_07_24.sh](./Chapter_07/Listing_07_24.sh)
    - [Listing_07_25.json](./Chapter_07/Listing_07_25.json)
  - **Chapter_08/**
@@ -138,8 +145,12 @@ The complete code for the examples in the book [AWS Security - Manning Publicati
    - [Listing_08_13.sh](./Chapter_08/Listing_08_13.sh)
    - [Listing_08_14.sh](./Chapter_08/Listing_08_14.sh)
    - [Listing_08_15.sh](./Chapter_08/Listing_08_15.sh)
+   - [Listing_08_16.txt](./Chapter_08/Listing_08_16.txt)
    - [Listing_08_17.sh](./Chapter_08/Listing_08_17.sh)
+   - [Listing_08_18.txt](./Chapter_08/Listing_08_18.txt)
  - **Chapter_09/**
+   - [Listing_09_01.py](./Chapter_09/Listing_09_01.py)
+   - [Listing_09_02.py](./Chapter_09/Listing_09_02.py)
    - [Listing_09_03.sh](./Chapter_09/Listing_09_03.sh)
    - [Listing_09_04.sh](./Chapter_09/Listing_09_04.sh)
    - [Listing_09_05.sh](./Chapter_09/Listing_09_05.sh)
@@ -148,11 +159,13 @@ The complete code for the examples in the book [AWS Security - Manning Publicati
    - [Listing_09_08.sh](./Chapter_09/Listing_09_08.sh)
    - [Listing_09_09.json](./Chapter_09/Listing_09_09.json)
    - [Listing_09_10.sh](./Chapter_09/Listing_09_10.sh)
+   - [Listing_09_11.txt](./Chapter_09/Listing_09_11.txt)
  - **Chapter_10/**
    - [Listing_10_01.sh](./Chapter_10/Listing_10_01.sh)
    - [Listing_10_02.sh](./Chapter_10/Listing_10_02.sh)
    - [Listing_10_03.sh](./Chapter_10/Listing_10_03.sh)
    - [Listing_10_04.sh](./Chapter_10/Listing_10_04.sh)
+   - [Listing_10_05.py](./Chapter_10/Listing_10_05.py)
    - [Listing_10_06.sh](./Chapter_10/Listing_10_06.sh)
    - [Listing_10_07.sh](./Chapter_10/Listing_10_07.sh)
    - [Listing_10_08.json](./Chapter_10/Listing_10_08.json)
@@ -164,5 +177,6 @@ The complete code for the examples in the book [AWS Security - Manning Publicati
    - [Listing_11_05.json](./Chapter_11/Listing_11_05.json)
    - [Listing_11_06.sh](./Chapter_11/Listing_11_06.sh)
    - [Listing_11_07.sh](./Chapter_11/Listing_11_07.sh)
+
 
 <!-- filetreestop -->
